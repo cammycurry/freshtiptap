@@ -1,6 +1,6 @@
 import { useEditor, EditorContent } from "@tiptap/react"
-import Document from "@tiptap/extension-document"
-import Paragraph from "@tiptap/extension-paragraph"
+// import Document from "@tiptap/extension-document"
+// import Paragraph from "@tiptap/extension-paragraph"
 import Text from "@tiptap/extension-text"
 
 import Heading from "@tiptap/extension-heading"
@@ -13,12 +13,17 @@ import HardBreak from "@tiptap/extension-hard-break"
 import Dropcursor from "@tiptap/extension-dropcursor"
 import Gapcursor from "@tiptap/extension-gapcursor"
 
+import { Document } from "./extensions/doc"
+import { Paragraph } from "./extensions/paragraph"
+import { DBlock } from "./extensions/dBlock"
+
 import MenuBar from "./MenuBar"
 
 const Tiptap = () => {
   const editor = useEditor({
     extensions: [
       Document,
+      DBlock,
       Paragraph,
       Text,
 
